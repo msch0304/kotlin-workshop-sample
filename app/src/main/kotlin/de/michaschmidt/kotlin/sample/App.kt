@@ -3,6 +3,27 @@
  */
 package de.michaschmidt.kotlin.sample
 
+import de.michaschmidt.kotlin.sample.booking.Booking
+import de.michaschmidt.kotlin.sample.booking.BookingCategory
+import de.michaschmidt.kotlin.sample.booking.Bookings
+
+var listTest = mutableListOf(
+        Booking(1, 100.23, BookingCategory.BUS),
+        Booking(2, 2300.21, BookingCategory.COMPLETE),
+        Booking(3, 2100.34, BookingCategory.FLIGHT),
+        Booking(4, 652.00, BookingCategory.HOTEL),
+        Booking(5, 80.50, BookingCategory.TRAIN),
+        Booking(6, 1010.00, BookingCategory.INDIVIDUAL),
+        Booking(7, 2020.10, BookingCategory.SHIP),
+        Booking(8, 200.10, BookingCategory.HOTEL),
+        Booking(9, 1800.12, BookingCategory.COMPLETE),
+        Booking(10, 562.90, BookingCategory.FLIGHT),
+        Booking(11, 320.00, BookingCategory.INDIVIDUAL),
+        Booking(12, 5600.00, BookingCategory.SHIP),
+        Booking(13, 80.50, BookingCategory.HOTEL),
+        Booking(14, 3000.99, BookingCategory.COMPLETE),
+        Booking(15, 2309.30, BookingCategory.FLIGHT)
+)
 class App {
     val greeting: String
         get() {
@@ -12,4 +33,10 @@ class App {
 
 fun main() {
     println(App().greeting)
+
+    val bookings = Bookings(mutableListOf())
+    for (booking in listTest) {
+        bookings.addBooking(booking)
+    }
+    bookings.printOut()
 }

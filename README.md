@@ -10,3 +10,10 @@ a sample repository for exercise and samples in kotlin
 - stage the change and commit it
 - checkout the square branch, rebase it to he main-branch
 - merge the square-bracnh into the master
+
+## Second Exercise
+
+- create a branch "test" and switch to it
+- implement the tests
+- run the tests with gradle
+- merge into master

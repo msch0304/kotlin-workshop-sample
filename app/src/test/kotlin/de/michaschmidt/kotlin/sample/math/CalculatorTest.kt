@@ -1,18 +1,78 @@
 package de.michaschmidt.kotlin.sample.math
 
-import org.junit.jupiter.api.Assertions.*
+import kotlin.test.Test
+import kotlin.test.assertEquals
 
 class CalculatorTest {
 
-    @org.junit.jupiter.api.Test
-    fun product() {
+    @Test
+    fun productInt() {
+        val calc = Calculator()
+        val result = calc.product(2, 6)
+        assertEquals(12, result)
     }
 
-    @org.junit.jupiter.api.Test
-    fun exponantiante() {
+    @Test
+    fun productDouble() {
+        val calc = Calculator()
+        val result = calc.product(3.5, 2.0)
+        assertEquals(7.0, result)
+    }
+    @Test
+    fun exponantianteInt() {
+        val calc = Calculator()
+        val result = calc.exponantiante(2,2)
+        assertEquals(4, result)
     }
 
-    @org.junit.jupiter.api.Test
-    fun average() {
+    @Test
+    fun exponantianteDouble() {
+        val calc = Calculator()
+        val result = calc.exponantiante(4.0,0.5)
+        assertEquals(2.0, result)
+    }
+
+    @Test
+    fun averageInt() {
+        val liste = listOf(2,3,4,1,0,3,4,5)
+        val calc = Calculator()
+        val result = calc.average(liste)
+        assertEquals(2, result)
+    }
+
+    @Test
+    fun averageDouble() {
+        val liste = listOf(2.0,3.0,4.0,1.0,0.0,3.0,4.0,3.0)
+        val calc = Calculator()
+        val result = calc.average(liste)
+        assertEquals(2.5, result)
+    }
+
+    @Test
+    fun absoluteInt(){
+        val calc = Calculator()
+        val result = calc.absolute(-3)
+        assertEquals(3, result)
+    }
+
+    @Test
+    fun absoluteDouble(){
+        val calc = Calculator()
+        val result = calc.absolute(-2.5)
+        assertEquals(2.5, result)
+    }
+
+    @Test
+    fun squareInt(){
+        val calc = Calculator()
+        val result = calc.square(-3)
+        assertEquals(9, result)
+    }
+
+    @Test
+    fun squareDouble(){
+        val calc = Calculator()
+        val result = calc.square(1.5)
+        assertEquals(2.25, result)
     }
 }
